@@ -59,6 +59,10 @@ h1 {
   font-size: 2rem;
 }
 
+h3{
+  font-weight: 400;
+}
+
 .container {
   margin: 10rem auto;
   text-align: center;
@@ -114,6 +118,7 @@ h1 {
   border: 0;
   width: 100%;
   cursor: pointer;
+  padding: 0;
 }
 
 .button:focus {
@@ -171,6 +176,8 @@ h1 {
     background-position: -13% center;
     background-size: 44%;
     width: 1042px;
+    max-height: 550px;
+    position: relative;
   }
 
   #illustration-woman {
@@ -179,11 +186,15 @@ h1 {
 
   #illustration-box {
     position: absolute;
-    left: 0;
-    transform: translateX(181%) translateY(-43%);
+    left: -30%;
     display: block;
-    top: 50%;
+    top: 24%;
     width: auto;
+
+  }
+  .card__image {
+    display: flex;
+    overflow: hidden;
   }
 
   .accordion-card {
