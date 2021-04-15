@@ -59,14 +59,13 @@ h1 {
   font-size: 2rem;
 }
 
-h3{
+h3 {
   font-weight: 400;
 }
 
 .container {
   margin: 10rem auto;
   text-align: center;
-
 }
 .custom-padding {
   padding: 2px 20px;
@@ -85,7 +84,6 @@ h3{
 
 .card__image {
   display: flex;
-
 }
 
 #illustration-woman {
@@ -107,36 +105,35 @@ h3{
   padding-bottom: 0.75rem;
 }
 
-.card__header {
+.card__link {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.button {
-  background-color: transparent;
-  border: 0;
   width: 100%;
   cursor: pointer;
   padding: 0;
-}
+  color: var(--darker-grayish-blue);
+  text-decoration: none;
 
-.button:focus {
-  outline: none;
 }
 
 .card__body {
-  opacity: 0;
-  height: 0;
+  max-height: 0;
   overflow: hidden;
-  transition: 1s ease height;
+  transition: max-height ease 1s;
 }
 
-.card__body.open {
-  opacity: 1;
-  transition: 1s ease height;
-  height: 35px;
+.accordion-card:target .card__body {
+  max-height: 35px;
+  transition: max-height ease 1s;
+
 }
+
+.accordion-card:target .card__link {
+  color: var(--darker-desaturated-blue);
+    
+}
+
 
 @media only screen and (min-width: 90rem) {
   h1 {
@@ -190,7 +187,6 @@ h3{
     display: block;
     top: 24%;
     width: auto;
-
   }
   .card__image {
     display: flex;
@@ -201,12 +197,4 @@ h3{
     border-bottom: 1px solid var(--light-grayish-blue);
     padding-bottom: 0.75rem;
   }
-
-  .card__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-
 }
